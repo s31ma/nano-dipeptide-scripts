@@ -1,0 +1,13 @@
+def generate_dipeptides(amino_acids):
+    dipeptides = []
+    for amino_acid1 in amino_acids:
+        for amino_acid2 in amino_acids:
+            dipeptides.append(amino_acid1 + amino_acid2)
+    return dipeptides
+
+amino_acids = ['F', 'W', 'H', 'K', 'R', 'Y', 'T', 'S', 'Q', 'N', 'I', 'M', 'C', 'D', 'E', 'L', 'V', 'A', 'G', 'P']
+dipeptides = generate_dipeptides(amino_acids)
+
+for dipeptide in dipeptides:
+    print("fab " + (dipeptide) + ", prot")
+    print("save "+ (dipeptide) + ".pdb")
